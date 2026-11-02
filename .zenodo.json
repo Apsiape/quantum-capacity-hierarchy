@@ -1,0 +1,45 @@
+{
+  "title": "Where the quantum capacity sits in the arithmetical hierarchy",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Douglas, Seth",
+      "orcid": "0009-0007-4708-3252"
+    },
+    {
+      "name": "Mghirbi, Nidhal",
+      "orcid": "0009-0005-6534-1118"
+    }
+  ],
+  "description": "Quantum capacity can be approximated uniformly from below. For effectively described finite-dimensional channels, we give certified algorithms for every finite-block coherent-information maximum and an increasing rational sequence converging to the capacity Q. The closed threshold Q at least one half therefore lies in the second universal level of the arithmetical hierarchy. This contradicts the third-level hardness conjectured by Bhattacharyya, Mehta and Zhao, under standard computable reductions. Positivity of Q is semidecidable. On exact algebraic inputs it is decidable precisely when zero capacity has a complete effective certificate system; an activation-bound converse is conditional on decidability of the real exponential field. A measure-and-erase wrapper gives an undecidable all-length predicate for precisely specified MPO-generated families. For zero-error communication we distinguish known one-shot results from an unproved OR-repetition step. On the synchronous magic-square graph, all evaluated spectral families give six, including fractional Haemers bounds over every field, while a certified computation gives strong-square independence number 29. Either its Shannon capacity is six or a spectral point outside those families lies below six.",
+  "keywords": [
+    "quantum capacity",
+    "quantum channels",
+    "computability",
+    "arithmetical hierarchy",
+    "zero-error capacity",
+    "nonlocal games",
+    "Shannon capacity",
+    "Lovász theta"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "notes": "Preprint. It has not been peer reviewed. Paper and certificate data CC BY 4.0; programs MIT.",
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2601.22471",
+      "scheme": "arxiv",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "arXiv:2610.20775",
+      "scheme": "arxiv",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}

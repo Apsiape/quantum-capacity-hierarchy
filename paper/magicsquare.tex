@@ -1,0 +1,140 @@
+\section{The magic-square certificates}\label{sec:ms}
+Let $X=X_{\rm MS}$. Its vertices are the four legal bit assignments to
+each of $R_1,R_2,R_3,C_1,C_2,C_3$ in a $3\times3$ square; all context
+parities are even except $C_3$. Distinct vertices are adjacent if they
+belong to the same context or disagree on a shared cell. This fixes the
+24-vertex synchronous graph, rather than another magic-square event
+graph. Ordinary independence is $\alpha(X)=5$.
+
+\begin{proposition}[All-field certificate]\label{prop:haemers}
+For every field $\mathbb F$, the fractional Haemers bound satisfies
+$\mathcal H_f^{\mathbb F}(X)=6$.
+\end{proposition}
+\begin{proof}
+A $d$-representation is a block fitting matrix $M$ with diagonal $I_d$
+and zero blocks at distinct nonneighbors; its cost is $\operatorname{rank}M/d$.
+Factor $M=BA$ and put $V_v=\operatorname{im}A_v$. Then
+$B_vA_v=I_d$ and $B_vA_w=0$ at nonneighbors. Consequently
+\[
+ r(S)=d^{-1}\dim\sum_{v\in S}V_v
+\]
+is normalized, monotone and submodular, with
+\begin{equation}\label{eq:rankconstraints}
+ r(\{v\})=1,\qquad
+ r(\overline N(v)\cup\{v\})-r(\overline N(v))=1,
+\end{equation}
+where $\overline N(v)$ denotes distinct nonneighbors.
+
+The induced subgraph on
+\[
+\begin{gathered}
+ R_1:011;\quad R_2:000,011;\quad R_3:000,011;\quad C_1:000;\\
+ C_2:101,110;\quad C_3:100,111
+\end{gathered}
+\]
+is $2K_1\sqcup W_8$, where $W_8$ is the eight-cycle with opposite
+chords. The dimension inequalities force cost at least $6$ on this core.
+This is also the $n=8$ M\"obius-ladder Shannon-inequality argument of
+Blasiak--Kleinberg--Lubetzky~\cite[Theorem~5.2 and proof]{BKL}, applied
+to dimensions over any field. For an explicit finite verification, the
+accompanying certificate gives the identity
+\begin{equation}\label{eq:dual}
+ r(T)-6=\sum_i\lambda_i g_i(r)+\sum_j\mu_j h_j(r),
+ \qquad \lambda_i\geq0,
+\end{equation}
+using 33 monotonicity/submodularity rows $g_i\geq0$ and 10 rows
+$h_j=0$ from~\eqref{eq:rankconstraints} and normalization.
+Every coefficient is rational and the identity is checked exactly.
+Restriction to the core gives the lower bound on $X$; its six question
+cliques give the upper bound $6$.
+\end{proof}
+\begin{remark}[Recovery and exact quantum ceiling]
+The subspace framework is standard~\cite[Section~2.1]{BC}; the
+M\"obius-ladder lower bound is a recovery of~\cite{BKL}. The specific
+induced-core application supplies a useful certificate, not a new LP
+method. The Mermin--Peres observables~\cite{Mermin,Peres}, displayed in
+Appendix~\ref{app:certs}, give an exact four-dimensional perfect
+strategy. Therefore $\alpha_q(X)=\vartheta(X)=6$. Beigi's
+entanglement-assisted theta bound~\cite{Beigi} also applies to this
+restricted code parameter. Vertex transitivity
+and clique number four give $\overline\chi_f(X)=24/4=6$.
+These equalities use exact projections and combinatorial certificates,
+rather than floating SDP estimates.
+\end{remark}
+
+\paragraph{Certified computation.}
+The exact strong-square value is
+\begin{equation}\label{eq:29}
+ \alpha(X^{\boxtimes2})=29.
+\end{equation}
+A 29-word independent set was independently constructed in the first
+blind check and verified pairwise. For the upper bound, slicing by
+the first question gives at most $6\alpha(X)=30$ words. A question-pair
+block contains at most one word. A 30-word code therefore has five
+words in each row and column of question blocks, so its empty blocks
+form a permutation. Checked graph symmetries reduce the 720 permutations
+to two double cosets of sizes 72 and 648.
+The earlier independent encodings were UNSAT with CaDiCaL and Glucose.
+A further independent encoding was UNSAT with Lingeling for both
+representatives, and drat-trim separately verified both saved proof
+traces. The programs, formulas, traces, checker source, symmetry
+verification and lower witness are included in the computational supplement.
+
+\paragraph{Which spectral bounds are exhausted?}
+Every evaluated known spectral family gives $6$ on $X$: $\vartheta$,
+$\overline\chi_f$, all fractional Haemers bounds, and every point in
+the quantum spectrum, the last squeezed between $\alpha_q(X)=6$ and
+the question-clique ceiling. This also covers entanglement-assisted
+spectral points, including those reported in~\cite{MD}, provided their
+spectral membership is accepted. No proof in this note depends on that
+preprint's new membership claim.
+
+Vrana's refinements~\cite[Theorems~1.1--1.2]{Vrana} do not improve these
+evaluations. For a vertex-transitive graph, concavity and averaging over
+automorphisms show $F_f(X,U)=\log f(X)$ at the uniform distribution $U$.
+Thus interpolation of refinements gives
+$f_F(X)=\prod_i f_i(X)^{\lambda_i}=6$, also for pointwise limits of
+these interpolations. This specifies the evaluated closure, without
+claiming an exhaustive classification of all spectral constructions.
+
+\begin{corollary}[Spectral dichotomy]\label{cor:dichotomy}
+Either $\Theta(X)=6$, or a classical spectral point outside the evaluated
+families has value below $6$ on $X$. In the second case
+$\Theta(X)<\Theta_q(X)=6$. Presently the certified interval is
+$\sqrt{29}\leq\Theta(X)\leq6$.
+\end{corollary}
+\begin{proof}
+Zuiddam's duality~\cite{Zuiddam} says $\Theta(X)=\min_f f(X)$.
+Equation~\eqref{eq:29} gives the lower endpoint; the preceding evaluations
+give the assertions about a minimizing point.
+\end{proof}
+Vertex transitivity gives $\vartheta(\overline X)=24/\vartheta(X)=4$;
+the clique of size four gives $\Theta(\overline X)=4$. The diagonal
+independent set in $X\boxtimes\overline X$ has size 24, so the second
+branch would also give
+$\Theta(X\boxtimes\overline X)>\Theta(X)\Theta(\overline X)$.
+Supermultiplicativity of this kind is known in general from Alon~\cite{Alon}.
+The direct evaluated Haemers bounds fail to certify a strict gap here;
+structural arguments using auxiliary graphs remain possible.
+
+\paragraph{The classical shadow (conjectural).}
+Qualitative classical OR-repetition for all full-support synchronous
+games is equivalent to
+\[
+ \alpha(G)<\overline\chi(G)\quad\Longrightarrow\quad
+ \Theta(G)<\overline\chi(G).
+\]
+A minimum clique cover can be partitioned into question cliques; a
+perfect strategy is exactly an independent transversal. The only live
+case is $\alpha<\overline\chi_f=\overline\chi$. This is the integral-cover
+case of Shannon's $C_0$ versus $C_{0F}$ question~\cite{Shannon}, using
+the classical channel whose output supports are all maximal cliques.
+Then feedback fractional packing equals $\overline\chi_f$, and Shannon's
+feedback formula applies when $C_0>0$. The realization matters: an
+edge-symbol channel with the same graph can have a different feedback
+packing value~\cite{CLMW}. For $X$, the two realizations give packing
+values $6$ and $12$, respectively. This broad classical conjecture is
+not equivalent to the narrower $\omega^*\leq1/2$ quantum conjecture;
+the magic square itself is quantum-perfect. The first branch of
+Corollary~\ref{cor:dichotomy} would refute the classical conjecture,
+since $\alpha(X)=5<6$.

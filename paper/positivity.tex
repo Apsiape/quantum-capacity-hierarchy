@@ -1,0 +1,116 @@
+\section{Zero certificates and activation}\label{sec:positive}
+For the rest of this section the discrete domain is $\mathcal E$.
+Define the activation length
+\[
+ n_*(\Phi)=\min\{n\geq1:b_n(\Phi)>0\},
+\]
+with value $\infty$ when $Q=0$. Positivity has a finite witness, although
+the witness length is not supplied by the channel description.
+
+\begin{proposition}[Zero-certificate equivalence; unconditional]\label{prop:zero}
+The predicate $Q>0$ is decidable if and only if
+$Z=\{\Phi:Q(\Phi)=0\}$ is c.e. Equivalently, zero capacity has a sound
+and complete system of finite certificates with a computable verifier.
+\end{proposition}
+\begin{proof}
+The complement of $Z$ is c.e. by Corollary~\ref{cor:threshold}.
+If $Z$ is c.e., dovetail its enumeration with the positive-capacity
+search. Exactly one terminates. Conversely a decision algorithm enumerates
+$Z$. A c.e. enumeration yields finite certificates by recording the
+enumeration stage, and a computable verifier yields an enumeration by
+searching all finite certificates.
+\end{proof}
+
+\begin{remark}[Known structural certificates and a recent claim]
+PPT and antidegradability give effective zero-capacity certificates.
+For algebraic data, PPT is an exact positive-semidefiniteness test on the
+partially transposed Choi matrix. Antidegradability is an exact
+semialgebraic feasibility test for a symmetric two-output extension of
+the normalized Choi state. Both are decidable, by real quantifier
+elimination rather than approximate SDP termination~\cite{WCPG}.
+
+Zhu--Wang~\cite[Theorems~1.1 and 4.3; Section~5]{ZW} claim that the
+rational qutrit channel
+\[
+ \Lambda(X)=\frac12X+\frac14\bigl(\tr(X)I-X^{\mathsf T}\bigr)
+\]
+has zero private and quantum capacities while being NPT and
+non-antidegradable. Their proposed certificate uses a signed lift,
+a completely positive defect factorization, and a complete information
+comparison that tensorizes. We cite this as a preprint claim; its full
+signed-lift/BKM argument is not independently verified here and is not
+an input to our proofs. It changes the appropriate structural question:
+the issue for Proposition~\ref{prop:zero} is an effective complete
+enumeration of all zero-capacity channels. Additional examples or
+certificate classes can enlarge that enumeration without making it
+complete.
+\end{remark}
+
+The obstruction can be stated more sharply without assuming any
+particular structural classification.
+\begin{proposition}[A fixed certificate family]\label{prop:escape}
+Suppose $e\mapsto\Phi_e$ is a computable many-one reduction from HALT to
+$\{Q>0\}$. For every fixed sound c.e. set $C\subseteq Z$, the set
+\[
+ D_C=\{e:e\notin\mathrm{HALT},\ \Phi_e\notin C\}
+\]
+is not c.e., and is infinite. If $C$ includes the PPT and antidegradable
+channels, infinitely many distinct channel outputs evade both classes.
+\end{proposition}
+\begin{proof}
+The preimage of $C$ is c.e. and consists of nonhalting indices. Its union
+with $D_C$ is the complement of HALT, which is not c.e. If only finitely
+many distinct outputs occurred in $D_C$, exact equality of algebraic
+channel matrices with those finitely many outputs would enumerate $D_C$,
+a contradiction.
+\end{proof}
+This is a statement about uniform completeness. It does not prohibit a
+proof of zero capacity for an individual channel. The elementary
+certificate principle is analogous to the distillability discussion in
+\cite[Section~3.1]{WCPG} and the tensor-stable-positivity discussion in
+\cite[Section~4]{VNC}.
+
+Let $|\Phi|$ denote description length and set
+\[
+ A(s)=\max\{n_*(\Phi):|\Phi|\leq s,\ Q(\Phi)>0\},
+\]
+with maximum zero when the set is empty. Finitely many descriptions have
+length at most $s$, so $A(s)$ is a finite number.
+
+\begin{proposition}[Activation bounds; conditional reverse direction]\label{prop:activation}
+If positivity is decidable, $A$ is bounded by a computable function.
+Conversely, assume that $\operatorname{Th}(\R, +,\cdot,<,\exp)$ is
+decidable. Then a computable bound on $A$ decides positivity. In
+particular the equivalence holds under Schanuel's conjecture, by the
+Macintyre--Wilkie theorem.
+\end{proposition}
+\begin{proof}
+With a positivity decider, list all valid descriptions of length at most
+$s$ and identify the positive ones. Run the lower-bound searches for
+those finitely many channels until each has a witness $b_n>0$.
+The largest witnessed length, or zero for an empty list, is a computable
+upper bound on $A(s)$.
+
+For the converse, fixed-block positivity is an existential sentence over
+the real exponential field. Purify the input in dimension $D\times D$.
+Its output matrices are polynomial in the real and imaginary input
+coordinates, with algebraic coefficients. Quantify a unitary
+diagonalization and nonnegative eigenvalues $\lambda_i$ for each matrix.
+Represent $\lambda\ln\lambda$ by $t=\lambda y$, $\exp(y)=\lambda$ when
+$\lambda>0$, and by $t=0$ when $\lambda=0$.
+Algebraic coefficients have finite isolating definitions. The resulting
+sentence expresses positive coherent information; changing the logarithm
+base does not change its sign. The assumed theory decider therefore
+decides $b_n>0$. If $A\leq f$ computably, test
+$b_{\max(1,f(|\Phi|))}>0$. Monotonicity of $b_n$ proves correctness.
+\end{proof}
+\begin{remark}[Conditionality and attribution]
+Decidability of the real exponential field is not supplied by
+semialgebraic feasibility. Macintyre--Wilkie's implication from Schanuel
+is conditional~\cite{MW}; see also~\cite[version~3, Theorem~14.4]{BG}.
+The proposition is a bounded-witness consequence with a channel-specific
+entropy encoding. Under that hypothesis, undecidability of positivity
+would mean that $A$ is not eventually bounded by any computable function:
+finitely many exceptional sizes could be hardcoded. It does not say that
+every positive channel requires long activation.
+\end{remark}

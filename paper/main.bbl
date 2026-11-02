@@ -1,0 +1,220 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alon}
+Noga Alon.
+\newblock The {Shannon} capacity of a union.
+\newblock {\em Combinatorica}, 18:301--310, 1998.
+\newblock URL: \url{https://www.cs.tau.ac.il/~nogaa/PDFS/shann3.pdf}.
+
+\bibitem{BVY}
+Mohammad Bavarian, Thomas Vidick, and Henry Yuen.
+\newblock Anchored parallel repetition for nonlocal games, 2015.
+\newblock URL: \url{https://arxiv.org/abs/1509.07466}.
+
+\bibitem{Beigi}
+Salman Beigi.
+\newblock Entanglement-assisted zero-error capacity is upper bounded by the
+  {Lov{\'a}sz} theta function, 2010.
+\newblock arXiv:1002.2488.
+\newblock URL: \url{https://arxiv.org/abs/1002.2488}.
+
+\bibitem{BG}
+Alessandro Berarducci and Francesco Gallinaro.
+\newblock On the elementary theory of the real exponential field, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2603.08365v3}.
+
+\bibitem{BMZ}
+Archishna Bhattacharyya, Arthur Mehta, and Yuming Zhao.
+\newblock On the undecidability of quantum channel capacities, 2026.
+\newblock arXiv:2601.22471v3; FOCS 2026.
+\newblock URL: \url{https://arxiv.org/abs/2601.22471v3}.
+
+\bibitem{BKL}
+Anna Blasiak, Robert Kleinberg, and Eyal Lubetzky.
+\newblock Index coding via linear programming, 2011.
+\newblock URL: \url{https://arxiv.org/abs/1004.1379v2}.
+
+\bibitem{BBD}
+Holger Boche, Yannik B{\"o}ck, and Christian Deppe.
+\newblock On effective convergence in {Fekete}'s lemma and related
+  combinatorial problems in information theory, 2024.
+\newblock arXiv:2010.09896v5.
+\newblock URL: \url{https://arxiv.org/abs/2010.09896v5}.
+
+\bibitem{BC}
+Boris Bukh and Christopher Cox.
+\newblock On a fractional version of {Haemers}' bound, 2018.
+\newblock URL: \url{https://arxiv.org/abs/1802.00476v2}.
+
+\bibitem{CEMOPS}
+Toby~S. Cubitt, David Elkouss, William Matthews, Maris Ozols, David
+  P{\'e}rez-Garc{\'i}a, and Sergii Strelchuk.
+\newblock Unbounded number of channel uses may be required to detect quantum
+  capacity.
+\newblock {\em Nature Communications}, 6:6739, 2015.
+\newblock URL: \url{https://arxiv.org/abs/1408.5115}.
+
+\bibitem{CLMW}
+Toby~S. Cubitt, Debbie Leung, William Matthews, and Andreas Winter.
+\newblock Improving zero-error classical communication with entanglement.
+\newblock {\em Physical Review Letters}, 104:230503, 2010.
+\newblock URL: \url{https://arxiv.org/abs/0911.5300}.
+
+\bibitem{DCCWP}
+Gemma {De las Cuevas}, Toby~S. Cubitt, J.~Ignacio Cirac, Michael~M. Wolf, and
+  David P{\'e}rez-Garc{\'i}a.
+\newblock Fundamental limitations in the purifications of tensor networks.
+\newblock {\em Journal of Mathematical Physics}, 57:071902, 2016.
+\newblock URL: \url{https://arxiv.org/abs/1512.05709v1}.
+
+\bibitem{Devetak}
+Igor Devetak.
+\newblock The private classical capacity and quantum capacity of a quantum
+  channel.
+\newblock {\em IEEE Transactions on Information Theory}, 51:44--55, 2005.
+\newblock URL: \url{https://arxiv.org/abs/quant-ph/0304127}.
+
+\bibitem{EPG}
+David Elkouss and David P{\'e}rez-Garc{\'i}a.
+\newblock Memory effects can make the transmission capability of a
+  communication channel uncomputable.
+\newblock {\em Nature Communications}, 9:1149, 2018.
+\newblock URL: \url{https://www.nature.com/articles/s41467-018-03428-0}.
+
+\bibitem{Harris}
+Samuel~J. Harris.
+\newblock Universality of graph homomorphism games and the quantum coloring
+  problem, 2023.
+\newblock URL: \url{https://arxiv.org/abs/2305.18116v2}.
+
+\bibitem{JNVWY}
+Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen.
+\newblock {MIP* = RE}, 2020.
+\newblock Theorem 12.6 in version 3.
+\newblock URL: \url{https://arxiv.org/abs/2001.04383v3}.
+
+\bibitem{OM}
+Samad {Khabbazi Oskouei} and Stefano Mancini.
+\newblock Algorithmic complexity of quantum capacity.
+\newblock {\em Quantum Information Processing}, 17:94, 2018.
+\newblock URL: \url{https://arxiv.org/abs/1608.07730v3}.
+
+\bibitem{KPS}
+Se-Jin Kim, Vern~I. Paulsen, and Christopher Schafhauser.
+\newblock A synchronous game for binary constraint systems, 2017.
+\newblock URL: \url{https://arxiv.org/abs/1707.01016}.
+
+\bibitem{KGE}
+Martin Kliesch, David Gross, and Jens Eisert.
+\newblock Matrix product operators and states: {NP}-hardness and
+  undecidability.
+\newblock {\em Physical Review Letters}, 113:160503, 2014.
+\newblock URL: \url{https://arxiv.org/abs/1404.4466v2}.
+
+\bibitem{LL}
+Xin Li and Yinan Li.
+\newblock Multiplicative semidefinite programming upper bounds on quantum
+  no-signalling-assisted zero-error capacity, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2610.21071}.
+
+\bibitem{LZ}
+Yinan Li and Jeroen Zuiddam.
+\newblock Quantum asymptotic spectra of graphs and non-commutative graphs, and
+  quantum {Shannon} capacities, 2020.
+\newblock URL: \url{https://arxiv.org/abs/1810.00744v3}.
+
+\bibitem{Lloyd}
+Seth Lloyd.
+\newblock Capacity of the noisy quantum channel.
+\newblock {\em Physical Review A}, 55:1613--1622, 1997.
+\newblock URL: \url{https://arxiv.org/abs/quant-ph/9604015}.
+
+\bibitem{MW}
+Angus Macintyre and Alex~J. Wilkie.
+\newblock On the decidability of the real exponential field.
+\newblock In Piergiorgio Odifreddi, editor, {\em Kreiseliana: About and Around
+  Georg Kreisel}, pages 441--467. A K Peters, 1996.
+
+\bibitem{Mancinska}
+Laura Man{\v c}inska.
+\newblock The right entanglement for perfect nonlocality and zero-error
+  communication, 2026.
+\newblock arXiv:2610.06512v1.
+\newblock URL: \url{https://arxiv.org/abs/2610.06512v1}.
+
+\bibitem{MR}
+Laura Man{\v c}inska and David~E. Roberson.
+\newblock Quantum homomorphisms.
+\newblock {\em Journal of Combinatorial Theory, Series B}, 118:228--267, 2016.
+\newblock URL: \url{https://arxiv.org/abs/1212.1724}.
+
+\bibitem{Mermin}
+N.~David Mermin.
+\newblock Simple unified form for the major no-hidden-variables theorems.
+\newblock {\em Physical Review Letters}, 65:3373--3376, 1990.
+\newblock URL: \url{https://doi.org/10.1103/PhysRevLett.65.3373}.
+
+\bibitem{MD}
+Nidhal Mghirbi and Seth Douglas.
+\newblock The {Lov{\'a}sz} number is not alone: a continuum of {R{\'e}nyi}
+  points in the entanglement-assisted spectrum of graphs, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2610.20775v1}.
+
+\bibitem{PS}
+Connor Paddock and William Slofstra.
+\newblock Satisfiability problems and algebras of boolean constraint system
+  games, 2025.
+\newblock URL: \url{https://arxiv.org/abs/2310.07901v2}.
+
+\bibitem{Peres}
+Asher Peres.
+\newblock Incompatible results of quantum measurements.
+\newblock {\em Physics Letters A}, 151:107--108, 1990.
+\newblock URL: \url{https://doi.org/10.1016/0375-9601(90)90172-K}.
+
+\bibitem{Shannon}
+Claude~E. Shannon.
+\newblock The zero error capacity of a noisy channel.
+\newblock {\em IRE Transactions on Information Theory}, 2:8--19, 1956.
+\newblock URL: \url{https://doi.org/10.1109/TIT.1956.1056798}.
+
+\bibitem{Shor}
+Peter~W. Shor.
+\newblock The quantum channel capacity and coherent information, 2002.
+\newblock MSRI lecture notes.
+\newblock URL:
+  \url{https://legacy.slmath.org/workshops/203/schedules/1181/documents/3863/assets/34150}.
+
+\bibitem{VNC}
+Mirte {van der Eyden}, Tim Netzer, and Gemma {De las Cuevas}.
+\newblock Halos and undecidability of tensor stable positive maps, 2022.
+\newblock URL: \url{https://arxiv.org/abs/2110.02113v2}.
+
+\bibitem{Vrana}
+P{\'e}ter Vrana.
+\newblock Probabilistic refinement of the asymptotic spectrum of graphs, 2019.
+\newblock URL: \url{https://arxiv.org/abs/1903.01857}.
+
+\bibitem{Winter}
+Andreas Winter.
+\newblock Tight uniform continuity bounds for quantum entropies: conditional
+  entropy, relative entropy distance and energy constraints.
+\newblock {\em Communications in Mathematical Physics}, 347:291--313, 2016.
+\newblock URL: \url{https://arxiv.org/abs/1507.07775}.
+
+\bibitem{WCPG}
+Michael~M. Wolf, Toby~S. Cubitt, and David P{\'e}rez-Garc{\'i}a.
+\newblock Are problems in quantum information theory (un)decidable?, 2011.
+\newblock URL: \url{https://arxiv.org/abs/1111.5425}.
+
+\bibitem{ZW}
+Chengkai Zhu and Xin Wang.
+\newblock Quantum incapacity beyond no-cloning and {PPT} mechanisms, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2607.24693v1}.
+
+\bibitem{Zuiddam}
+Jeroen Zuiddam.
+\newblock The asymptotic spectrum of graphs and the {Shannon} capacity, 2018.
+\newblock URL: \url{https://arxiv.org/abs/1807.00169}.
+
+\end{thebibliography}

@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\hypersetup{pdftitle={Where the quantum capacity sits in the arithmetical hierarchy},pdfauthor={Seth Douglas and Nidhal Mghirbi}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\un}{\mathbf 1}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\Ga}{G_\alpha}
+\newcommand{\au}{\alpha_u^+}
+\newcommand{\aunif}{\alpha_u^{\mathrm{unif}}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\om}{\omega}
+\newcommand{\omt}{\tilde\omega}
+\newcommand{\omh}{\hat\omega}
+\newcommand{\FU}{F_{\mathrm U}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{maintheorem}{Theorem}
+\renewcommand{\themaintheorem}{\Alph{maintheorem}}
+\newtheorem{maincorollary}[maintheorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\newcommand{\RE}{\mathrm{RE}}
+\newcommand{\coRE}{\mathrm{coRE}}
+\title{Where the quantum capacity sits\\ in the arithmetical hierarchy}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+\input{abstract.txt}
+\end{abstract}
+\noindent{\footnotesize\textit{AI disclosure.} This paper was developed with AI assistance. The authors take responsibility for its claims; methods and verification limits appear in Section~\ref{sec:methods}.}
+{\small\tableofcontents}
+\input{intro}
+\input{hierarchy}
+\input{positivity}
+\input{families}
+\input{zeroerror}
+\input{magicsquare}
+\input{discussion}
+\input{appendix}
+\bibliographystyle{plainurl}
+{\small\bibliography{references}}
+\end{document}

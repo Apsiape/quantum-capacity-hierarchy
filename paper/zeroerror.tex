@@ -1,0 +1,123 @@
+\section{Zero error: finite witnesses and the missing repetition step}\label{sec:zeroerror}
+For a finite confusability graph $G$, write $\alpha_*(G)$ for its
+one-use message maximum with arbitrary finite-dimensional entanglement
+assistance. Write $\alpha_q(G)$ for the restricted maximally entangled,
+projective code parameter. These are different resources.
+Beigi's entanglement-assisted theta bound~\cite{Beigi} also bounds the
+restricted parameter. For recent resource-sensitive game-to-classical-channel
+correspondences and an arbitrary-versus-maximally-entangled separation,
+see Man\v{c}inska~\cite[Theorem~6 and Corollary~8]{Mancinska}; we do not
+use that result in the proofs below. Set
+\[
+ C_{0E}(G)=\sup_m\frac{\log\alpha_*(G^{\boxtimes m})}{m},\qquad
+ \Theta_q(G)=\sup_m\alpha_q(G^{\boxtimes m})^{1/m}.
+\]
+The strong product has distinct tuples adjacent when every coordinate
+is equal or adjacent. Product protocols give the required
+supermultiplicativity.
+
+\begin{proposition}[Uniform zero-error lower approximation]\label{prop:zerolower}
+On explicit finite graphs, $C_{0E}$ and $\Theta_q$ are uniformly left-c.e.
+Their closed computable-threshold predicates lie in $\Pi^0_2$.
+The same lower-approximation conclusion for $C_{0E}$ holds with exact
+algebraic channel data.
+\end{proposition}
+\begin{proof}
+For fixed message number $M$ and dimension $d$, entanglement-assisted
+graph coding is finite real-algebraic feasibility. One may use positive
+semidefinite matrices $\rho,\rho_i^v$ with
+\[
+ \tr\rho=1,\quad \sum_v\rho_i^v=\rho,\quad
+ \rho_i^v\rho_j^w=0\quad
+ (i\ne j,\ v=w\text{ or }v\sim w).
+\]
+For $\alpha_q$, replace these by projections $E_{i,v}$ with
+$\sum_vE_{i,v}=I$ and the same cross-message zero products.
+Real quantifier elimination decides each fixed-dimensional system.
+Dovetail over $m,M,d$ and enumerate rational lower estimates for
+$\log M/m$, or $M^{1/m}$. For algebraic channel data the fixed-dimensional
+protocol constraints likewise have exact algebraic coefficients.
+The supremum argument of~\eqref{eq:closed} completes the proof.
+\end{proof}
+\begin{remark}[Known criterion; representation restriction]
+These code descriptions are standard~\cite{CLMW,MR,LZ}.
+An approximation program for arbitrary computable-real entries does
+not decide exact support or zero products. The zero-error statement
+therefore uses the exact inputs specified in Section~\ref{sec:intro}.
+No such restriction was needed for ordinary capacity. Spectral duality
+in~\cite{LZ} is a minimum over an abstract spectrum; it supplies no
+effective convergent family of upper bounds. Li--Li's multiplicative
+SDP bound~\cite{LL} concerns no-signalling assistance and supplies a
+single bound. Neither it nor the spectral families in our related
+paper~\cite{MD} supply the missing convergence theorem.
+\end{remark}
+
+\paragraph{One-shot ceilings: a recovery.}
+Normalize a finite synchronous game by retaining self-legal answers,
+rejecting unequal answers at equal questions even off the sampling
+support, and making only unsupported off-diagonal tests vacuous.
+If a question loses every self-answer, detect it and use a fixed NO
+instance. Its graph $X$ has vertices $(q,a)$ and edges at distinct pairs
+for which either orientation is forbidden. There are $N=|Q|$ question
+cliques. Here $q$ means finite-dimensional strategies, $qa$ their
+closure, and $qc$ commuting-operator strategies. Harris's
+Theorem~5.5~\cite{Harris} identifies a perfect strategy
+with $\alpha_t(X)=N$ in the relevant $q,qa,qc$ models.
+
+In communication terms, aggregate code projections into
+$P_{q,a}=\sum_iE_{i,(q,a)}$ and $F_q=\sum_aP_{q,a}\leq I$.
+At the ceiling, $\sum_q\tau(F_q)=N$ forces $F_q=I$ for a faithful
+trace, giving perfect game measurements. Conversely the code is
+$E_{i,(q,a)}=\mathbf1_{i=q}P_{q,a}$, also in the tracial commuting model.
+
+The finite-dimensional ceiling is RE-complete; the commuting ceiling
+is co-RE-complete, by the known satisfiability results
+\cite{JNVWY,PS}; for the latter see~\cite[Theorem~5.11(c)]{PS}.
+KPS~\cite[Theorem~5.4 and Corollary~5.5]{KPS}
+give earlier $q$ versus $qa$ graph separations. Harris's
+Corollary~5.6 gives a $qa$ versus $qc$ separation. These are recoveries,
+not new separation or hardness theorems. Nonattainment of a finite-dimensional
+perfect strategy at supremum value one does not meet the soundness
+hypothesis below.
+
+\paragraph{The precise missing step (conjectural).}
+A projective packing consists of projections $P_v$ with $P_vP_w=0$
+on graph edges, of weight $\sum_v\tau(P_v)$. Its supremum is
+$\alpha_p$. Aggregating a projective code gives a packing, so
+$\alpha_q\leq\alpha_p$. A packing does not supply the message-indexed
+PVM decomposition needed for the converse.
+
+\begin{conjecture}[Packing OR-repetition]\label{conj:orc}
+For every normalized finite synchronous game with an effective rational
+question distribution having uniform marginals and entangled value
+$\omega^*\leq1/2$, there is $c_G\in(0,1)$ such that, for every $m\geq1$,
+\[
+ \alpha_p(X^{\boxtimes m})\leq(1-c_G)^m N^m.
+\]
+\end{conjecture}
+The constant may depend on the game; no computable modulus is asserted.
+The version with $\alpha_q$ would suffice for the restricted projective
+capacity and may be weaker. The strong power corresponds to the
+\emph{special OR predicate}: identical tuple vertices are accepted, as
+are pairs with a coordinate that is distinct and nonadjacent. It is not
+Boolean OR of coordinate acceptance. AND repetition instead gives the
+disjunctive product, adjacent when some coordinate loses.
+
+The verified line extraction gives success at least $2M/N^m-1$ from
+a packing of weight $M$, after completing abstentions by fixed answers.
+It uses $\tau(PQ)\geq\tau(P)+\tau(Q)-1$, without commutativity.
+This is only a constant density loss. Anchored AND parallel
+repetition~\cite{BVY} does not give exponential OR loss.
+The attempted AND-enforcing route fails on product
+inputs because tensor-product output overlaps multiply and hence give
+the strong product.
+
+JNVWY's Theorem~12.6~\cite{JNVWY} provides attained finite-dimensional
+perfect completeness and soundness at most $1/2$ for the halting
+reduction. Diagonal normalization preserves that witness. After
+symmetrizing the rational distribution, a common marginal
+$\nu(q)=k_q/K$ becomes uniform by replacing $q$ with $k_q$ clones.
+Averaging clone-indexed measurements preserves the soundness bound.
+Thus Conjecture~\ref{conj:orc} would separate the asymptotic $\Theta_q$
+ceiling on this family. This is a conditional route, with no conclusion
+here for unrestricted entanglement-assisted codes.

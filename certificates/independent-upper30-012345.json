@@ -1,0 +1,10 @@
+{
+  "solver": "Lingeling",
+  "result": "UNSAT",
+  "seconds": 4.1994828999741,
+  "proof_lines": 91682,
+  "variables": 11496,
+  "clauses": 50449,
+  "orbit": 72,
+  "cnf_sha256": "e38074684d5d1b26c2ec76064901a0542b071806dee0ed9ca9eb0d8b0e343c58"
+}

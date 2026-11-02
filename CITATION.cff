@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite this preprint if you use its results."
+title: "Where the quantum capacity sits in the arithmetical hierarchy"
+authors:
+- family-names: Douglas
+  given-names: Seth
+  orcid: "https://orcid.org/0009-0007-4708-3252"
+- family-names: Mghirbi
+  given-names: Nidhal
+  orcid: "https://orcid.org/0009-0005-6534-1118"
+version: 1.0.0
+date-released: 2026-11-01
+type: generic
+license:
+  - CC-BY-4.0
+  - MIT
+abstract: "Quantum capacity can be approximated uniformly from below. For effectively described finite-dimensional channels, we give certified algorithms for every finite-block coherent-information maximum and an increasing rational sequence converging to the capacity Q. The closed threshold Q at least one half therefore lies in the second universal level of the arithmetical hierarchy. This contradicts the third-level hardness conjectured by Bhattacharyya, Mehta and Zhao, under standard computable reductions. Positivity of Q is semidecidable. On exact algebraic inputs it is decidable precisely when zero capacity has a complete effective certificate system; an activation-bound converse is conditional on decidability of the real exponential field. A measure-and-erase wrapper gives an undecidable all-length predicate for precisely specified MPO-generated families. For zero-error communication we distinguish known one-shot results from an unproved OR-repetition step. On the synchronous magic-square graph, all evaluated spectral families give six, including fractional Haemers bounds over every field, while a certified computation gives strong-square independence number 29. Either its Shannon capacity is six or a spectral point outside those families lies below six."
+preferred-citation:
+  type: generic
+  title: "Where the quantum capacity sits in the arithmetical hierarchy"
+  authors:
+  - family-names: Douglas
+    given-names: Seth
+    orcid: "https://orcid.org/0009-0007-4708-3252"
+  - family-names: Mghirbi
+    given-names: Nidhal
+    orcid: "https://orcid.org/0009-0005-6534-1118"
+  year: 2026
+  version: 1.0.0
+  notes: 'Preprint. CC BY 4.0 (paper, data), MIT (programs).'

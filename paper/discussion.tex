@@ -1,0 +1,62 @@
+\section{Discussion}\label{sec:discussion}
+The proved picture separates four issues. Ordinary capacity is
+computably accessible from below; equality with a positive threshold
+adds a universal precision quantifier. Positivity has finite witnesses,
+but complete zero certificates need not be enumerable. Under the real
+exponential hypothesis, computable bounds on activation would settle
+positivity. In the MPO family, undecidability comes from an external
+all-length quantifier. For restricted asymptotic zero-error coding, the
+unproved issue is exponential packing loss in strong powers.
+
+\paragraph{Outlook (conjectural and heuristic).}
+An asymptotic projective zero-error ceiling hardness result remains open. Three developments would justify reopening the broader
+search: a spectral point below six on $X_{\rm MS}$; a mechanism for
+coherent amplification within tensor powers; or effective zero-capacity
+certificates beyond PPT and antidegradability. The third condition must
+now take the Zhu--Wang claim into account. An independently validated
+new certificate could enlarge the structural toolkit; it would not by
+itself establish completeness of that toolkit. The first condition
+would settle the concrete classical test, not prove the quantum
+repetition conjecture. The second is a missing mechanism, not an
+existence theorem.
+
+\emph{Heuristic.} Distillability, tensor-stable positivity, $Q>0$ and
+quantum $C_0>0$ may be manifestations of a common problem about witnesses
+in tensor powers. Their analogies suggest looking simultaneously for
+positive finite witnesses and effective zero certificates. No reductions
+or equivalence between these four questions are claimed. In particular,
+incompleteness of a named structural certificate class does not alone
+imply undecidability.
+
+\section{Methods and provenance}\label{sec:methods}
+\subsection*{How this work was done}
+The authors developed the results and proofs with assistance from AI
+models from more than one developer. They take responsibility for every
+claim. The authors chose the question, directed the work and decided
+which lines to pursue; the models did most of the exploration,
+derivation and drafting.
+
+Three rounds of proof development recorded arguments, unsuccessful approaches and self-checks.
+Separate sessions that had not seen the material were instructed to
+refute it and check primary sources. This version incorporates their
+repairs. Literature and priority searches were AI-assisted and bounded
+to the checked sources; recent preprint claims were not accepted as
+independently verified proofs.
+A subsequent independent whole-paper audit verified the finite certificates
+and both strong-square UNSAT traces with a separate checker, and requested
+the attribution and reference repairs recorded with that audit.
+
+\paragraph{Computational evidence.}
+The all-field dimension certificate uses only rational arithmetic after
+LP discovery; its semantic replay reconstructs the graph and checks
+every inequality row and coefficient of~\eqref{eq:dual}. This replay
+and the exact non-diagonal wrapper check were run again during assembly.
+The square upper bound has independent CaDiCaL, Glucose and Lingeling
+encodings; a separate drat-trim check verifies both saved Lingeling
+UNSAT traces. The supplement contains the finite certificate data,
+checker programs and source, formulas, traces, symmetry verification,
+lower witness and replay instructions. The graph reduction, encodings
+and checker implementation remain part of the trust base; this is not
+a proof-assistant formalization. These
+computations certify the stated finite quantities; none extrapolates a
+Shannon-capacity gap from finitely many powers.

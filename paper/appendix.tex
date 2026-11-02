@@ -1,0 +1,66 @@
+\appendix
+\section{Two effective finite-block derivations}\label{app:effective}
+In the purification proof, grid the real unit sphere in dimension
+$2D^2$. Choose rational mesh small enough that rounding a unit vector
+has Euclidean error at most $\eta/2$, discard zero vectors, and normalize.
+Normalization changes the error by at most another $\eta/2$.
+The resulting finite algebraic net is effective. To evaluate entropy,
+approximate each computable Hermitian output by a rational Hermitian
+matrix in operator norm. Isolate its algebraic eigenvalues and use Weyl's
+inequality to bound the ordered true eigenvalues. Intersect the
+eigenvalue intervals with $[0,1]$. The continuous extension of $-x\log x$ at zero has an effective modulus on $[0,1]$;
+zero eigenvalues cause no rank decision. Choose the net and evaluation
+errors to sum to the requested tolerance in~\eqref{eq:modulus}.
+
+The independent complementary-channel derivation starts with a
+computable positive square root of the unnormalized Choi matrix
+$J_\Phi=(\operatorname{id}\otimes\Phi)(|\Omega\rangle\langle\Omega|)$,
+where $|\Omega\rangle=\sum_{i=1}^{d_A}|i\rangle|i\rangle$.
+Reshape all $d_Ad_B$ square-root columns into Kraus operators, including
+zero columns, to obtain a fixed-size environment $d_E=d_Ad_B$.
+If starting from the normalized Choi state $J_\Phi/d_A$, multiply its
+square-root columns by $\sqrt{d_A}$ before reshaping. No minimal-rank decomposition is
+needed. For input states at trace distance $\delta\leq1$, separate
+entropy continuity bounds on the $B$ and $E$ outputs give
+\[
+ |I_c(\rho)-I_c(\sigma)|
+ \leq2n\delta\log(d_Bd_E)+2g(\delta).
+\]
+Density matrices have effective nets $YY^*$ with $Y$ drawn from
+normalizations of nonzero rational complex matrices in Frobenius norm:
+every state is $YY^*$ for
+some unit-Frobenius $Y$, and
+$\tfrac12\|YY^*-ZZ^*\|_1\leq\|Y-Z\|_F$.
+Finite maximization with this modulus again proves~\eqref{eq:c}.
+An even shorter lower-only proof enumerates dense algebraic inputs and
+certified coherent-information lower evaluations over every length.
+Continuity identifies their supremum with $Q$.
+
+\section{Certificate conventions}\label{app:certs}
+The exact magic-square observables, with Pauli matrices $X,Y,Z$, are
+\[
+ \begin{pmatrix}
+ X\otimes I&I\otimes X&X\otimes X\\
+ I\otimes Z&Z\otimes I&Z\otimes Z\\
+ X\otimes Z&Z\otimes X&Y\otimes Y
+ \end{pmatrix}.
+\]
+They commute within contexts and multiply to $I$ except in the last
+column, where the product is $-I$. Their legal joint eigenspace
+projections have rank one and give the asserted perfect code.
+
+For the all-field certificate, subsets of the ten core vertices are
+encoded by bit masks in the order printed in Section~\ref{sec:ms}.
+The accompanying \texttt{dimension-dual.json} records all nonzero
+multipliers and rows. Monotonicity rows are
+$r(S\cup\{i\})-r(S)$; submodularity rows are
+$r(S\cup\{i\})+r(S\cup\{j\})-r(S)-r(S\cup\{i,j\})$.
+The replay verifies that the equality rows correspond to the graph's
+actual nonneighbors before summing them. This gives a finite exact
+proof of the numerical LP optimum, independent of floating solver
+accuracy. The computational supplement includes the SAT formulas,
+symmetry builder, pairwise lower-witness check, both saved Lingeling
+UNSAT traces and drat-trim checker source. The two traces were separately
+verified by drat-trim. This reduces reliance on solver outcomes, while
+the graph reduction, Boolean encodings and checker implementation remain
+in the trust base; no proof-assistant verification is claimed.

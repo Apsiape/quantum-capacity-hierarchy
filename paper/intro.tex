@@ -1,0 +1,98 @@
+\section{Introduction}\label{sec:intro}
+Can a finite description of a quantum channel tell us whether its quantum
+capacity exceeds a threshold? There are two different questions here. An
+algorithm may approximate a capacity from below without ever being able to
+decide equality with the threshold. The distinction determines where the
+decision problem belongs in the arithmetical hierarchy.
+
+The picture is small. Write $\Sigma^0_1=\RE$ for the computably enumerable
+sets, and $\Pi^0_1=\coRE$ for their complements. A predicate in $\Pi^0_2$
+has the form $\forall k\,\exists s\,R(k,s)$ with $R$ decidable. The following
+table gives upper bounds, except where completeness is expressly stated.
+The ordinary capacity $Q$ is measured in qubits per channel use.
+\begin{center}
+\small
+\begin{tabular}{p{0.62\linewidth}l}
+\hline
+Question & Class or status\\ \hline
+$Q(\Phi)>0$; $Q(\Phi)=0$ & $\Sigma^0_1$; $\Pi^0_1$\\
+$Q(\Phi)\geq\tfrac12$; $Q(\Phi)<\tfrac12$ & $\Pi^0_2$; $\Sigma^0_2$\\
+$Q(\Phi)\geq\tfrac34$ versus $Q(\Phi)\leq\tfrac14$ (promise) & $\RE$~\cite{BMZ}\\
+Closed thresholds for $C_{0E}(G)$ and $\Theta_q(G)$ & $\Pi^0_2$\\
+One-shot game-graph ceiling, $q$ / $qc$ models & $\RE$-complete / $\coRE$-complete\\
+$Q(\Phi_L)=0$ for every MPO-family index $L$ & $\coRE$, undecidable\\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Input and reduction conventions.}
+All dimensions are finite and supplied. For ordinary capacity we allow
+\emph{effective channel names}: computable Kraus entries with programs
+giving certified approximations at requested precision, under the promise
+that they describe a CPTP map. Computable Choi names are equivalent for
+this purpose. Our default discrete domain $\mathcal E$ consists of explicit
+algebraic Choi matrices, encoded by integer polynomials and isolating data;
+validity is decidable. Circuit descriptions over a fixed computable gate
+set are also covered; Clifford+$T$ gives algebraic data. Zero-error results
+use explicit finite graphs or exact algebraic channel data. Hardness means
+computable many-one hardness unless stated otherwise. Promise reductions
+must produce valid instances; Turing reductions must make valid queries.
+These conventions apply throughout.
+
+\paragraph{Main contribution: the channel application and its hierarchy consequence.}
+We apply standard effective finite-dimensional optimization and the
+effective Fekete principle to quantum capacity. This gives increasing
+rational lower bounds uniformly from a channel description and yields
+the second-level closed-threshold bound below.
+In particular, the problem called (QCap) by Bhattacharyya,
+Mehta and Zhao (BMZ) lies in $\Pi^0_2$. Their Conjecture~1.4 reads
+\begin{quote}
+``(QCap) is $\Pi^0_3$-hard.''
+\end{quote}
+For their effective circuit setting, this is false as printed, under
+computable many-one or Turing reductions. The correction concerns the
+hierarchy discussion, rather than their hardness constructions.
+
+\begin{remark}[Known ingredients and closest prior approximation result]
+The coherent-information formula is due to Lloyd, Shor and
+Devetak~\cite{Lloyd,Shor,Devetak}. Our finite-dimensional optimization
+uses Winter's entropy continuity bound~\cite{Winter}.
+Wolf--Cubitt--P\'erez-Garc\'ia~\cite{WCPG} distinguish exact decisions from
+approximation. For quantum capacity, Khabbazi Oskouei--Mancini
+\cite[Theorem~4.1]{OM} establish recursive approximability as convergence
+of a computable rational sequence without a modulus or monotonicity.
+The generic effective transformation from computable superadditive
+representations to lower approximations is explicit in Boche, B\"ock and
+Deppe~\cite[Lemmas~17--19 and Theorem~21]{BBD}, building on Zheng and
+Weihrauch. Our contribution here is its channel-specific implementation
+and the resulting correction to the QCap hierarchy discussion.
+\end{remark}
+
+\paragraph{New synthesis: what an undecidability proof would require.}
+Positivity is semidecidable. On $\mathcal E$, it is decidable exactly when
+zero capacity has a sound and complete effective system of finite
+certificates. A separate activation-bound characterization has one
+unconditional direction and one direction conditional on decidability of
+the real exponential field. An undecidable all-length predicate already
+exists for precisely specified MPO-indexed channel families. Its external
+index is essential to the statement.
+
+\begin{remark}[Known in special settings; recoveries]
+BMZ prove QMA-hardness of a gapped ordinary-capacity problem and RE-hardness
+of a restricted one-shot zero-error problem~\cite{BMZ}.
+Cubitt--Elkouss--Matthews--Ozols--P\'erez-Garc\'ia--Strelchuk
+\cite{CEMOPS} prove that no fixed block length suffices across all channels;
+this does not give one channel that fails to attain capacity at every
+length. The one-shot game-graph equivalences and model separations below
+recover Harris~\cite{Harris}, Kim--Paulsen--Schafhauser~\cite{KPS}, and
+Paddock--Slofstra~\cite{PS}. Our role in that part is the communication
+phrasing.
+\end{remark}
+
+The third takeaway is a concrete obstruction to extending one-shot
+hardness to asymptotic zero-error coding. A sufficient OR-repetition
+conjecture remains unproved. Its classical shadow reaches a specific
+24-vertex magic-square graph: all the evaluated spectral families give
+the upper bound $6$, while a certified computation gives strong-square
+independence number $29$. The resulting dichotomy isolates the missing
+spectral information without deciding the Shannon capacity.

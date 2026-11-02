@@ -1,0 +1,88 @@
+\section{An external index: MPO-generated channel families}\label{sec:mpo}
+An all-length question about a family can be undecidable even when every
+zero-capacity member has a structural certificate. The following wrapper
+makes the distinction explicit.
+
+\begin{proposition}[Measure-and-erase wrapper]\label{prop:wrapper}
+Let $W$ be a finite Hermitian matrix and let $c>0$ be rational with
+$c\geq\|W\|$. There is a channel $\Phi[W]$ with algebraic data when $W$
+is algebraic, and rational Choi data when $W$ is rational, such that
+\[
+ Q(\Phi[W])=0\ \Longleftrightarrow\ W\geq0.
+\]
+\end{proposition}
+\begin{proof}
+Put $A=(I-W/c)/2$ and $R=(I+W/c)/2$. On an input $X\otimes q$, with
+$q$ a message qubit, measure the effects $A,R$ on $X$. Bob receives
+the qubit and an accept flag in the first branch, and an erasure and
+reject flag in the second. An isometry sends the measured $X$ to the
+environment, with $\sqrt A$ or $\sqrt R$ applied; the environment gets
+the qubit exactly in the reject branch. Orthogonal flags in both outputs
+remove cross terms. Bob's map is
+\[
+ \rho\longmapsto
+ |\mathrm{acc}\rangle\langle\mathrm{acc}|\otimes
+       \tr_X[(A\otimes I)\rho]
+ +\tr[(R\otimes I)\rho]\,
+       |\mathrm{rej},e\rangle\langle\mathrm{rej},e|.
+\]
+It is linear in $A,R$, which proves the rational Choi assertion.
+
+If $W\geq0$, then $A\leq R$ and $R\geq I/2$. On its reject branch
+the environment uses the effect $G=R^{-1/2}AR^{-1/2}\leq I$ on $X$,
+forwards its qubit on success, and erases otherwise. On its accept
+branch it erases. The identity $\sqrt R G\sqrt R=A$ recovers Bob's
+accept map, including correlations with the message; the remaining
+weight is his reject map. This is an antidegrading channel.
+
+If $\langle v,Wv\rangle=-\mu<0$ for a unit vector $v$, fix $X=v$.
+The message sees a qubit erasure channel with acceptance probability
+$(1+\mu/c)/2$. The maximally mixed message input has coherent information
+$\mu/c>0$.
+\end{proof}
+
+\begin{corollary}[Indexed-family undecidability]\label{cor:mpo}
+Given a rational TI MPO description generating diagonal Hermitian
+operators $W_L$, set $\Phi_L=\Phi[W_L]$ with effective positive rational
+norm bounds $c_L$. The predicate $\forall L\geq1\ Q(\Phi_L)=0$ is co-c.e.
+and undecidable. For rational open-boundary descriptions the complementary
+existential predicate is RE-complete. Periodic fixed-size descriptions
+also give undecidability, without a many-one-completeness claim here.
+\end{corollary}
+\begin{proof}
+Kliesch--Gross--Eisert~\cite[Theorem~5 and Lemmas~11--12]{KGE} give a
+many-one reduction to existence of a negative eigenvalue at some length for rational
+open-boundary diagonal MPOs, even at physical dimension two and fixed
+bond bound. Finite-length positivity is decidable exactly, so existence
+of a negative eigenvalue is c.e. and RE-complete. The wrapper preserves
+this predicate length by length.
+
+De las Cuevas et al.~\cite[Problem~2 and Lemma~3]{DCCWP} give a periodic
+version with seven rational $7\times7$ matrices. Their promise separates
+positivity at every length from a negative eigenvalue at every sufficiently large
+length. Their reduction framework permits Turing reductions; this
+supports the periodic undecidability assertion. If the matrices are
+$C_i\in\Q^{s\times s}$, take
+$K=\max(1,\max_i\|C_i\|_\infty)$ and $c_L=sK^L$ for trace contraction.
+For open boundaries take
+$c_L=\max(1,\|\ell\|_1\|r\|_\infty)K^L$. These bound every diagonal
+coefficient. Complementation proves co-c.e. membership of the universal
+predicate.
+\end{proof}
+
+The translation invariance is that of the generating MPO tensor.
+The channel has a distinguished message qubit and terminal flags; its
+Choi matrix has fixed-bond MPO form on the $X$ chain with terminal
+auxiliary systems. This specifies an effectively generated family,
+rather than a spatially translation-invariant local channel with
+identical input and output sites. In particular $\Phi_L$ is not asserted
+to be $\Phi_1^{\otimes L}$. Every universal-YES length is antidegradable;
+undecidability remains in the external quantifier over $L$.
+
+\begin{remark}[Attribution]
+The undecidability is imported from MPO positivity. Transport of that
+problem to tensor positivity already appears in~\cite{VNC}. The wrapper
+adds a CPTP capacity interpretation. The memory-channel capacity theorem
+of Elkouss--P\'erez-Garc\'ia~\cite{EPG} is an operational analogue, for
+classical capacity with memory.
+\end{remark}

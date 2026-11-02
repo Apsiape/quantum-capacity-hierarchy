@@ -1,0 +1,129 @@
+\section{Uniform lower approximation and closed thresholds}\label{sec:hierarchy}
+For a channel $\Phi:A\to B$, choose a complementary channel $\Phi^c$ and put
+\[
+ b_n(\Phi)=\max_{\rho} \{S(\Phi^{\otimes n}(\rho))
+                  -S((\Phi^c)^{\otimes n}(\rho))\},\qquad
+ a_n(\Phi)=b_n(\Phi)/n.
+\]
+All logarithms are base two unless $\ln$ is written. Pure inputs give
+$b_n\geq0$. Product inputs give $b_{n+m}\geq b_n+b_m$, so
+$b_n$ is nondecreasing, although $a_n$ need not be. The capacity formula
+and Fekete's lemma give
+\begin{equation}\label{eq:capacity}
+ Q(\Phi)=\lim_{n\to\infty}a_n(\Phi)=\sup_{n\geq1}a_n(\Phi).
+\end{equation}
+
+\begin{theorem}[Uniform finite-block and capacity approximation]\label{thm:uniform}
+There is a uniform algorithm returning rationals $c(\Phi,n,k)$ such that
+\begin{equation}\label{eq:c}
+ |c(\Phi,n,k)-a_n(\Phi)|\leq2^{-k}.
+\end{equation}
+Consequently $Q$ is uniformly left-c.e.: a computable increasing rational
+sequence $r_s(\Phi)$ converges to $Q(\Phi)$.
+\end{theorem}
+\begin{proof}
+Here is the finite-block algorithm; Appendix~\ref{app:effective} supplies
+two explicit effective-net derivations. A reference system of dimension
+$D=d_A^n$ purifies every input. Thus $b_n$ is the maximum of
+$-S(R|B)$ over a unit sphere in $\C^D\otimes\C^D$.
+For unit vectors at Euclidean distance at most $\eta\leq1$, their output
+states have trace distance at most $\eta$. Winter's bound gives the
+computable modulus
+\begin{equation}\label{eq:modulus}
+ |I_c(\psi)-I_c(\varphi)|\leq
+ 2\eta n\log d_A+g(\eta),\quad
+ g(\eta)=(1+\eta)h_2\!\left(\frac{\eta}{1+\eta}\right),
+\end{equation}
+where $g(0)=0$. Optimize certified entropy evaluations over a sufficiently
+fine finite net. Both the mesh error and evaluation error are controlled
+uniformly. Divide by $n$ to obtain~\eqref{eq:c}.
+
+The following lower-approximation step is the effective Fekete principle
+\cite[Lemmas~17--19 and Theorem~21]{BBD}, applied uniformly to the
+finite-block channel quantities. Explicitly, define
+\begin{equation}\label{eq:rs}
+ r_s=\max\bigl(\{0\}\cup
+ \{c(\Phi,n,k)-2^{-k}:1\leq n,k\leq s\}\bigr).
+\end{equation}
+These are increasing rational lower bounds. Given any $a_n$, taking
+$k$ arbitrarily large shows $\sup_s r_s\geq a_n$.
+Equation~\eqref{eq:capacity} proves convergence to $Q$.
+\end{proof}
+
+\begin{corollary}[Threshold bookkeeping]\label{cor:threshold}
+For every fixed computable threshold $t$, the predicate $Q(\Phi)>t$ is
+c.e., $Q(\Phi)\geq t$ is in $\Pi^0_2$, and $Q(\Phi)<t$ is in
+$\Sigma^0_2$. In particular, (QCap) is in $\Pi^0_2$,
+(GapQcap) is in RE, and $Q=0$ is co-RE.
+\end{corollary}
+\begin{proof}
+For rational $t$ the decisive formulas have decidable matrices:
+\begin{align}
+ Q>t&\ \Longleftrightarrow\ \exists s\ [r_s>t],\label{eq:strict}\\
+ Q\geq t&\ \Longleftrightarrow\
+ \forall k\geq1\ \exists s\ [r_s>t-2^{-k}],\label{eq:closed}\\
+ Q<t&\ \Longleftrightarrow\
+ \exists k\geq1\ \forall s\ [r_s\leq t-2^{-k}].\label{eq:below}
+\end{align}
+For computable $t$, strict comparison with it is c.e.; its precision
+witness merges with the existential stage in~\eqref{eq:closed}.
+Complementation gives the last threshold class. Search for $r_s>1/2$
+accepts every promised $Q\geq3/4$ instance and no promised $Q\leq1/4$
+instance. Finally $Q\geq0$, so~\eqref{eq:strict} at zero proves the
+positivity and zero-capacity claims.
+\end{proof}
+The RE upper bound for (GapQcap) is already stated by
+BMZ~\cite[Section~1.3]{BMZ}; we include it to compare the gapped and
+closed thresholds.
+
+Equality at $Q=t$ is included in~\eqref{eq:closed}: every threshold
+$t-2^{-k}$ is eventually crossed. This is why numerical approximation
+does not turn the closed threshold into an existential test. For general
+program names one can dovetail completed lower evaluations, including
+partial computations off the valid-input promise. This gives a
+$\Pi^0_2$ extension agreeing on valid names. No validity test for such
+names is required.
+
+\paragraph{BMZ's conjecture.}
+Computable preimages preserve $\Pi^0_2$. Thus $\Pi^0_3$ many-one hardness
+of (QCap) would collapse the strict arithmetical hierarchy. Under Turing
+reductions, a $\Pi^0_2$ language is computable in $\mathbf0''$, whereas
+a $\Pi^0_3$-complete language has degree $\mathbf0'''$. The same
+contradiction holds for valid-query promise reductions, using the
+extension just described. BMZ's stated $\Pi^0_4$ membership remains a
+valid loose bound. Their separate gap-hardness conjecture is unaffected.
+
+\begin{conjecture}[A corrected form]\label{conj:qcap}
+On the effective algebraic circuit domain, (QCap) is $\Pi^0_2$-complete.
+\end{conjecture}
+This is a proposed replacement, not a lower bound proved here.
+
+\paragraph{Question 2 and finite attainment.}
+BMZ ask whether a channel exists with $a_n(\Phi)<Q(\Phi)$ for every
+integer $n\geq1$. The following implication uses those integers, rather
+than only powers of two.
+\begin{proposition}\label{prop:attainment}
+If every channel in the encoded family attains $Q$ at some finite block
+length, then (QCap) is in $\Delta^0_2$. Hence $\Pi^0_2$ hardness, under
+many-one or Turing reductions, would force a channel in that family
+with $a_n<Q$ for all $n$.
+\end{proposition}
+\begin{proof}
+Under finite attainment, $Q\geq t$ is equivalent to
+$\exists n\ [a_n\geq t]$. For rational $t$,
+\[
+ a_n\geq t\ \Longleftrightarrow\
+ \forall k\ [c(\Phi,n,k)+2^{-k}\geq t].
+\]
+Thus the threshold is $\Sigma^0_2$ and, independently by
+Corollary~\ref{cor:threshold}, $\Pi^0_2$. Their intersection is
+$\Delta^0_2$, computable in $\mathbf0'$. This excludes $\Pi^0_2$
+Turing hardness as well as many-one hardness.
+\end{proof}
+No all-length nonattaining channel follows without the hardness
+hypothesis. Nor does undecidability of an exact threshold alone imply
+noncomputability of the capacity function: equality tests for computable
+reals can already be undecidable. By contrast, many-one RE-hardness of
+this closed threshold would exclude a uniformly computable $Q$, since
+its closed threshold would then be co-c.e.; RE-hardness of the gapped
+promise would also exclude it, since a computable $Q$ decides that promise.
