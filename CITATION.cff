@@ -9,6 +9,7 @@ authors:
   given-names: Nidhal
   orcid: "https://orcid.org/0009-0005-6534-1118"
 version: 1.0.0
+doi: "10.5281/zenodo.23875900"
 date-released: 2026-11-01
 type: generic
 license:
@@ -27,4 +28,5 @@ preferred-citation:
     orcid: "https://orcid.org/0009-0005-6534-1118"
   year: 2026
   version: 1.0.0
+  doi: "10.5281/zenodo.23875900"
   notes: 'Preprint. CC BY 4.0 (paper, data), MIT (programs).'
