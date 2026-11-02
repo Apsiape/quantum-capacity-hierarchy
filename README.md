@@ -2,11 +2,18 @@
 
 Seth Douglas and Nidhal Mghirbi
 
-Version 1.0.0, November 2026. DOI: [10.5281/zenodo.23875900](https://doi.org/10.5281/zenodo.23875900). Concept DOI (all versions): [10.5281/zenodo.23875899](https://doi.org/10.5281/zenodo.23875899). A preprint; it has not been peer reviewed.
+Version 1.0.1, November 2026. Version 1.0.0: [10.5281/zenodo.23875900](https://doi.org/10.5281/zenodo.23875900). Concept DOI (all versions): [10.5281/zenodo.23875899](https://doi.org/10.5281/zenodo.23875899). A preprint; it has not been peer reviewed.
 
 ## Abstract
 
 Quantum capacity can be approximated uniformly from below. For effectively described finite-dimensional channels, we give certified algorithms for every finite-block coherent-information maximum and an increasing rational sequence converging to the capacity Q. The closed threshold Q at least one half therefore lies in the second universal level of the arithmetical hierarchy. This contradicts the third-level hardness conjectured by Bhattacharyya, Mehta and Zhao, under standard computable reductions. Positivity of Q is semidecidable. On exact algebraic inputs it is decidable precisely when zero capacity has a complete effective certificate system; an activation-bound converse is conditional on decidability of the real exponential field. A measure-and-erase wrapper gives an undecidable all-length predicate for precisely specified MPO-generated families. For zero-error communication we distinguish known one-shot results from an unproved OR-repetition step. On the synchronous magic-square graph, all evaluated spectral families give six, including fractional Haemers bounds over every field, while a certified computation gives strong-square independence number 29. Either its Shannon capacity is six or a spectral point outside those families lies below six.
+
+## Changes in version 1.0.1
+
+- Credits Harjas Sandhu's manuscripts (10.5281/zenodo.23349086 and 10.5281/zenodo.23349192), which claim that positivity of the
+  quantum and private capacities is RE-complete on finite rational-complex channel descriptions. If this holds, the enumeration in
+  Proposition 3.1 does not exist on the paper's domain. A refutation-first check of ours found no error in the chain from complete
+  order to exact zero capacity. Also credits Hirche (arXiv:2610.03706) on channel orders and zero private capacity. No result changes.
 
 ## Contents
 

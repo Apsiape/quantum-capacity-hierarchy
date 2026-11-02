@@ -87,6 +87,11 @@ Samuel~J. Harris.
   problem, 2023.
 \newblock URL: \url{https://arxiv.org/abs/2305.18116v2}.
 
+\bibitem{Hirche}
+Christoph Hirche.
+\newblock Quantum estimation, channel orders, and private capacity, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2610.03706}.
+
 \bibitem{JNVWY}
 Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen.
 \newblock {MIP* = RE}, 2020.
@@ -171,6 +176,21 @@ Asher Peres.
 \newblock Incompatible results of quantum measurements.
 \newblock {\em Physics Letters A}, 151:107--108, 1990.
 \newblock URL: \url{https://doi.org/10.1016/0375-9601(90)90172-K}.
+
+\bibitem{SandhuOrder}
+Harjas Sandhu.
+\newblock Complete information orders of quantum channels: equivalence and
+  undecidability.
+\newblock Zenodo, version 1.0, 2026.
+\newblock \href {https://doi.org/10.5281/zenodo.23349086}
+  {\path{doi:10.5281/zenodo.23349086}}.
+
+\bibitem{SandhuCapacity}
+Harjas Sandhu.
+\newblock From complete channel order to capacity and one-way distillation.
+\newblock Zenodo, version 1.0, 2026.
+\newblock \href {https://doi.org/10.5281/zenodo.23349192}
+  {\path{doi:10.5281/zenodo.23349192}}.
 
 \bibitem{Shannon}
 Claude~E. Shannon.
